@@ -45,7 +45,6 @@
        function OpenSide(){
         navBarToggle.classList.toggle('active');
        };
-
   
     </script>
        
@@ -57,9 +56,9 @@
      if($(window).scrollTop() > 50) {
            $("#nav").addClass("activeHeader");
            $("a").addClass("activeLinks");
-        //    $('a').css('color', 'white');
+           $('a').css('color', 'white');
             $("#open").addClass("menuActive");
-    } else {
+          } else {
             $("#nav").removeClass("activeHeader");
             $("a").removeClass("activeLinks");
             $("#open").removeClass("menuActive");
