@@ -112,7 +112,7 @@ a#links.activeLinks1{
     color: red;
 }
 .banner-image{
-    background-color: blue;
+ 
     position: absolute;
     right: 10rem;
     bottom: 10rem;
@@ -175,6 +175,15 @@ a#links.activeLinks1{
             transform: translateY(10rem);
         }
     }
+    .sectionA{
+        .banner-image{
+            width: 100%;
+            position: static;
+            float: right;
+            margin-right: 1rem;
+            transform: translateY(15rem);
+        }
+    }
 }
 
 @media only screen and (max-width: 440px){
@@ -187,10 +196,9 @@ a#links.activeLinks1{
         .banner-title h1{
             font-size: 30px;
         }
+        
     }
-  
-        .banner-image{
-          
-        }
+   
+     
     
 }

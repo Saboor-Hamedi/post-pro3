@@ -120,7 +120,6 @@ a#links.activeLinks1 {
   color: red;
 }
 .sectionA .banner-image {
-  background-color: blue;
   position: absolute;
   right: 10rem;
   bottom: 10rem;
@@ -179,6 +178,15 @@ a#links.activeLinks1 {
     -webkit-transform: translateY(10rem);
             transform: translateY(10rem);
   }
+
+  .sectionA .banner-image {
+    width: 100%;
+    position: static;
+    float: right;
+    margin-right: 1rem;
+    -webkit-transform: translateY(15rem);
+            transform: translateY(15rem);
+  }
 }
 @media only screen and (max-width: 440px) {
   .sectionA .banner-title {
@@ -189,14 +197,6 @@ a#links.activeLinks1 {
   }
   .sectionA .banner-title h1 {
     font-size: 30px;
-  }
-
-  .banner-image {
-    width: 100%;
-    background-color: red;
-    position: static;
-    display: block;
-    text-align: center;
   }
 }
 /*# sourceMappingURL=style.css.map */
