@@ -30,9 +30,9 @@ ul{
         display: inline-block;
         padding: 10px 15px;
         a{
-           color: white;
             text-decoration: none;
             font-size: 18px;
+            color: red;
         }
     }
 }
@@ -71,12 +71,15 @@ ul{
 }
 
 #nav.activeHeader {
-    background: #fff;
+    background: white;
     -webkit-box-shadow: 0 1px 5px rgba(0, 0, 0, 0.25);
     -moz-box-shadow: 0 1px 5px rgba(0, 0, 0, 0.25);
     box-shadow: 0 1px 5px rgba(0, 0, 0, 0.25);
 }
 a#links.activeLinks{
+    color: black;
+}
+a#links.activeLinks1{
     color: white;
 }
 .menuActive{
@@ -84,10 +87,10 @@ a#links.activeLinks{
     color: black;
     font-weight: bold;
 }
+
 // sections
 
 .sectionA{
-  
     background-image: url('/assets/back.png');
     width: 100%;
     height: 100vh;
@@ -107,6 +110,19 @@ a#links.activeLinks{
 }
 .banner-title h1 span{
     color: red;
+}
+.banner-image{
+    background-color: blue;
+    position: absolute;
+    right: 10rem;
+    bottom: 10rem;
+    max-width: 300px;
+    padding: 10px;
+    border-radius: 10px;
+    .image-wrapper img{
+        width: 100%;
+        border-radius: 10px;
+    }
 }
 }
 .sectionB
@@ -164,7 +180,6 @@ a#links.activeLinks{
 @media only screen and (max-width: 440px){
     .sectionA{
         .banner-title{
-         
             width: 100%;
             position: static;
             transform: translateY(10rem);
@@ -173,4 +188,9 @@ a#links.activeLinks{
             font-size: 30px;
         }
     }
+  
+        .banner-image{
+          
+        }
+    
 }

@@ -31,6 +31,11 @@
                             <span>I'm web developer</span>
                     </h1>
             </div>
+            <div class="banner-image">
+                <div class="image-wrapper">
+                    <img src="/assets/anim.png" alt="">
+                </div>
+            </div>
         </section>
     <section class="sectionB"></section>
     </main>
@@ -45,10 +50,14 @@
     </script>
        
     <script>
+    
+    
+        //size of screen
  $(window).on("scroll", function() {
      if($(window).scrollTop() > 50) {
-            $("#nav").addClass("activeHeader");
-             $("a").addClass("activeLinks");
+           $("#nav").addClass("activeHeader");
+           $("a").addClass("activeLinks");
+        //    $('a').css('color', 'white');
             $("#open").addClass("menuActive");
     } else {
             $("#nav").removeClass("activeHeader");
@@ -56,6 +65,7 @@
             $("#open").removeClass("menuActive");
     }
 });
+
     </script>
 </body>
 </html>

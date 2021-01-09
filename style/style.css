@@ -37,9 +37,9 @@ body {
   padding: 10px 15px;
 }
 #nav ul li a {
-  color: white;
   text-decoration: none;
   font-size: 18px;
+  color: red;
 }
 
 .logo {
@@ -78,12 +78,16 @@ body {
 }
 
 #nav.activeHeader {
-  background: #fff;
+  background: white;
   -webkit-box-shadow: 0 1px 5px rgba(0, 0, 0, 0.25);
   box-shadow: 0 1px 5px rgba(0, 0, 0, 0.25);
 }
 
 a#links.activeLinks {
+  color: black;
+}
+
+a#links.activeLinks1 {
   color: white;
 }
 
@@ -114,6 +118,19 @@ a#links.activeLinks {
 }
 .sectionA .banner-title h1 span {
   color: red;
+}
+.sectionA .banner-image {
+  background-color: blue;
+  position: absolute;
+  right: 10rem;
+  bottom: 10rem;
+  max-width: 300px;
+  padding: 10px;
+  border-radius: 10px;
+}
+.sectionA .banner-image .image-wrapper img {
+  width: 100%;
+  border-radius: 10px;
 }
 
 .sectionB {
@@ -172,6 +189,14 @@ a#links.activeLinks {
   }
   .sectionA .banner-title h1 {
     font-size: 30px;
+  }
+
+  .banner-image {
+    width: 100%;
+    background-color: red;
+    position: static;
+    display: block;
+    text-align: center;
   }
 }
 /*# sourceMappingURL=style.css.map */
