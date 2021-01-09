@@ -115,6 +115,7 @@ a#links.activeLinks1 {
   color: white;
   font-size: 40px;
   text-shadow: 0 0 43px 52px blue;
+  text-align: center;
 }
 .sectionA .banner-title h1 span {
   color: red;
