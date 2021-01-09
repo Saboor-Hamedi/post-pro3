@@ -111,20 +111,23 @@ a#links.activeLinks1{
 .banner-title h1 span{
     color: red;
 }
+
+}
 .banner-image{
- 
     position: absolute;
-    right: 10rem;
-    bottom: 10rem;
-    max-width: 300px;
+    right: 10rem;   
+    top: 20rem;
     padding: 10px;
-    border-radius: 10px;
-    .image-wrapper img{
-        width: 100%;
-        border-radius: 10px;
+    border-radius: .5rem;
+
+  
     }
+    .image-wrapper{
+        img{
+            width: 300px;
+        }
 }
-}
+
 .sectionB
 {
     height: 100vh;
@@ -158,32 +161,38 @@ a#links.activeLinks1{
     }
     .sectionA{
         .banner-title{
-          
             width: 500px;
             position: static;
             transform: translateY(10rem);
         }
+       
     }
-    
+    .banner-image{
+        position: static;
+        transform: translateY(10rem);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        .image-wrapper{
+            width: 300px;
+           
+            padding: 10px;
+            img{
+                width: 100%;
+            }
+        }
+    }
 }
 @media only screen and (max-width: 600px){
     .sectionA{
         .banner-title{
-           
             width: 100%;
             position: static;
             transform: translateY(10rem);
         }
     }
-    .sectionA{
-        .banner-image{
-            width: 100%;
-            position: static;
-            float: right;
-            margin-right: 1rem;
-            transform: translateY(12rem);
-        }
-    }
+  
+   
 }
 
 @media only screen and (max-width: 440px){

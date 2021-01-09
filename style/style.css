@@ -119,17 +119,17 @@ a#links.activeLinks1 {
 .sectionA .banner-title h1 span {
   color: red;
 }
-.sectionA .banner-image {
+
+.banner-image {
   position: absolute;
   right: 10rem;
-  bottom: 10rem;
-  max-width: 300px;
+  top: 20rem;
   padding: 10px;
-  border-radius: 10px;
+  border-radius: 0.5rem;
 }
-.sectionA .banner-image .image-wrapper img {
-  width: 100%;
-  border-radius: 10px;
+
+.image-wrapper img {
+  width: 300px;
 }
 
 .sectionB {
@@ -170,6 +170,28 @@ a#links.activeLinks1 {
     -webkit-transform: translateY(10rem);
             transform: translateY(10rem);
   }
+
+  .banner-image {
+    position: static;
+    -webkit-transform: translateY(10rem);
+            transform: translateY(10rem);
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+  .banner-image .image-wrapper {
+    width: 300px;
+    padding: 10px;
+  }
+  .banner-image .image-wrapper img {
+    width: 100%;
+  }
 }
 @media only screen and (max-width: 600px) {
   .sectionA .banner-title {
@@ -177,15 +199,6 @@ a#links.activeLinks1 {
     position: static;
     -webkit-transform: translateY(10rem);
             transform: translateY(10rem);
-  }
-
-  .sectionA .banner-image {
-    width: 100%;
-    position: static;
-    float: right;
-    margin-right: 1rem;
-    -webkit-transform: translateY(12rem);
-            transform: translateY(12rem);
   }
 }
 @media only screen and (max-width: 440px) {
