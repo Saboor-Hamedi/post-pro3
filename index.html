@@ -48,11 +48,12 @@
  $(window).on("scroll", function() {
      if($(window).scrollTop() > 50) {
             $("#nav").addClass("activeHeader");
-           ;
+             $("a").addClass("activeLinks");
+            $("#open").addClass("menuActive");
     } else {
             $("#nav").removeClass("activeHeader");
-         
-         
+            $("a").removeClass("activeLinks");
+            $("#open").removeClass("menuActive");
     }
 });
     </script>

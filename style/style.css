@@ -84,10 +84,11 @@ body {
 }
 
 a#links.activeLinks {
-  color: black;
+  color: white;
 }
 
 .menuActive {
+  background-color: white;
   color: black;
   font-weight: bold;
 }
