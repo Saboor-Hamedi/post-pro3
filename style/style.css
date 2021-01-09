@@ -57,6 +57,7 @@ body {
   border-radius: 20px;
   -webkit-transition: 1s;
   transition: 1s;
+  z-index: 999;
 }
 
 .logo:hover img {
@@ -134,7 +135,7 @@ a#links.activeLinks {
     margin: 0;
     margin-top: 50px;
     background-color: #070707;
-    z-index: 999;
+    z-index: 10;
     display: none;
   }
   #nav ul li {
