@@ -88,7 +88,6 @@ a#links.activeLinks {
 }
 
 .menuActive {
-  background-color: white;
   color: black;
   font-weight: bold;
 }
@@ -131,6 +130,7 @@ a#links.activeLinks {
   }
   #nav ul {
     width: 100%;
+    height: 250px;
     padding: 0;
     margin: 0;
     margin-top: 50px;
