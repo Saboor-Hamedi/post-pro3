@@ -165,7 +165,7 @@ a#links.activeLinks1 {
 }
 
 .banner-title::before,
-.banner-image::before {
+.banner-image::before, #nav::before, #ul::before {
   content: "";
   position: absolute;
   top: 0;
@@ -181,14 +181,16 @@ a#links.activeLinks1 {
 }
 
 .banner-title::after,
-.banner-image::after {
+.banner-image::after, #nav::after,
+#ul::after {
   -webkit-box-shadow: 0 0 15px #d35400;
           box-shadow: 0 0 15px #d35400;
   -webkit-filter: blur(3px);
           filter: blur(3px);
 }
 
-.banner-title, .banner-image {
+.banner-title, .banner-image,
+#nav, #ul {
   -webkit-box-shadow: 0 0 15px #d35400;
           box-shadow: 0 0 15px #d35400;
   text-shadow: 0 0 15px #d35400;
