@@ -158,6 +158,7 @@ a#links.activeLinks1 {
   color: white;
   font-size: 18px;
   line-height: 2;
+  text-align: center;
 }
 
 @-webkit-keyframes animateRight {
