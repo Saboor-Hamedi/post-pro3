@@ -252,8 +252,9 @@ a#links.activeLinks1{
         width: 100%;
         height: auto;
         .banner-wrapper{
-            flex-direction: column-reverse;
-            
+            // flex-direction: column-reverse;
+                display:grid;
+                grid-template-columns: 1fr;
             .banner-title{
                 margin-top: 0;
                 height: auto;
@@ -271,7 +272,6 @@ a#links.activeLinks1{
     .banner-image, .banner-title{
         width:300px;
         height: 300px;
-        margin-top: 10px;
     }
 }
 @media only screen and(max-width: 600px){
