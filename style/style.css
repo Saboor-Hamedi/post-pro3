@@ -299,6 +299,10 @@ a#links.activeLinks1 {
     display: block;
   }
 
+  .sectionA {
+    width: 100%;
+    height: auto;
+  }
   .sectionA .banner-wrapper {
     -webkit-box-orient: vertical;
     -webkit-box-direction: reverse;
@@ -315,6 +319,18 @@ a#links.activeLinks1 {
   }
   .sectionA .banner-wrapper .banner-image {
     height: auto;
+  }
+
+  .banner-image, .banner-title {
+    width: 300px;
+    height: 300px;
+    margin-top: 10px;
+  }
+}
+@media only screen and (max-width: 600px) {
+  .banner-image, .banner-title {
+    width: 230px;
+    height: 230px;
   }
 }
 @-webkit-keyframes animateRight {

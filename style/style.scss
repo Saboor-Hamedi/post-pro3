@@ -249,6 +249,8 @@ a#links.activeLinks1{
         }
     }
     .sectionA{
+        width: 100%;
+        height: auto;
         .banner-wrapper{
             flex-direction: column-reverse;
             
@@ -265,6 +267,17 @@ a#links.activeLinks1{
                 height: auto;
             }
         }
+    }
+    .banner-image, .banner-title{
+        width:300px;
+        height: 300px;
+        margin-top: 10px;
+    }
+}
+@media only screen and(max-width: 600px){
+    .banner-image, .banner-title{
+        width: 230px;
+        height: 230px;
     }
 }
 @keyframes animateRight {
