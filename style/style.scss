@@ -107,15 +107,16 @@ a#links.activeLinks1{
         display: flex;
         justify-content: space-around;
         align-items: center;
-        gap: 10px;
+        gap: 2rem;
+        
       
     }
     .banner-image{
-        padding: 10px;
-        max-width: 400px;
-        height: 400px;
-     
+        max-width: 380px;
+        height: 380px;
+        border-radius: 10px;
         animation: animateRight 1s ease;
+       
         img{
             width: 100%;
             border-radius: 10px;
@@ -123,11 +124,15 @@ a#links.activeLinks1{
     }
    
     .banner-title{
+        position: relative;
         padding: 10px;
-        max-width: 400px;
-        height: 400px;
-   
+        max-width: 380px;
+        height: 380px;
+        border-radius: 10px;
+        background: #000000;
+        
         animation: animateLeft 1s ease;
+       
         h1{
             width: 100%;
             font-size: 50px;
@@ -142,30 +147,80 @@ a#links.activeLinks1{
 
         }
     }
+ 
 }
-@keyframes animateRight {
+
+.banner-title::before,
+.banner-image::before{
+    content: '';
+    position: absolute;
+    top:0;
+    left:0;
+    width:100%;
+    height:100%;
+    border-radius:50%;
+    transition: .5s;
+    transform: scale(.9);
+    z-index: -1;
+}
+.banner-title::after, 
+.banner-image::after{
+    box-shadow: 0 0 15px #d35400;
+    filter: blur(3px);
+
+}
+.banner-title, .banner-image{
+    box-shadow: 0 0 15px #d35400;
+    text-shadow: 0 0 15px #d35400;
+}
+@keyframes animateLeft{
     from{
-        opacity: 0.2;
-        transform: translateX(150px);
+     
     }
     to{
-        opacity: 1;
-        transform: translateX(0);
-    }
-}
-@keyframes animateLeft {
-    from{
-        opacity: 0.2;
-        transform: translateX(-150px);
-    }
-    to{
-        opacity: 1;
-        transform: translateX(0);
+
     }
 }
 .sectionB
 {
     height: 100vh;
+}
+#container {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .GradientBorder {
+    position: relative;
+    width: 450px;
+    padding: 40px 0;
+    font-size: 5em;
+    color: #fff;
+    text-align: center;
+    letter-spacing: 5px;
+    transition: 1s;
+    background: #020117;
+    animation: pulse 2s infinite;
+
+  }
+
+  @keyframes pulse {
+	0% {
+		transform: scale(0.95);
+		box-shadow: 0 0 0 0 rgba(0, 0, 0, 0.7);
+	}
+
+	70% {
+		transform: scale(1);
+		box-shadow: 0 0 0 10px rgba(0, 0, 0, 0);
+	}
+
+	100% {
+		transform: scale(0.95);
+		box-shadow: 0 0 0 0 rgba(0, 0, 0, 0);
+	}
 }
 @media only screen and(max-width: 786px){
     .open-close{
@@ -196,7 +251,9 @@ a#links.activeLinks1{
     .sectionA{
         .banner-wrapper{
             flex-direction: column-reverse;
+            
             .banner-title{
+                margin-top: 0;
                 height: auto;
                 h1{
                     font-size: 30px;
@@ -204,8 +261,30 @@ a#links.activeLinks1{
                 }
             }
             .banner-image{
+                
                 height: auto;
             }
         }
+    }
+}
+@keyframes animateRight {
+    from{
+        opacity: 0.2;
+        transform: translateX(150px);
+    }
+    to{
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+@keyframes animateLeft {
+    from{
+        opacity: 0.2;
+        transform: translateX(-150px);
+     
+    }
+    to{
+        opacity: 1;
+        transform: translateX(0);
     }
 }

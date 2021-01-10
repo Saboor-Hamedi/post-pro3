@@ -1,69 +1,74 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Posfolio</title>
-    <script src="/links/query.js"></script>
-    <link rel="stylesheet" href="style/style.css">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Posfolio</title>
+<script src="/links/query.js"></script>
+<link rel="stylesheet" href="style/style.css">
 </head>
 <body>
-    <nav id="nav">
-        <div class="logo" ><a href="#">
-            <img src="/assets/logo.png" alt="">
-        </a></div>
-        <ul id="ul">
-            <li><a href="#" id="links">Home</a></li>
-            <li><a href="#" id="links">Home</a></li>
-            <li><a href="#" id="links">Home</a></li>
-            <li><a href="#" id="links">Home</a></li>
-        </ul>
-        <div class="open-close" id="open" onclick="OpenSide();">
-            Menu
-        </div>
-    </nav>
-    <main>
-        <section class="sectionA">
-                <div class="banner">
-                    <div class="banner-wrapper">
-                            <div class="banner-title">
-                                <h1>Developed by Saboor</h1>
-                                <p>
-                                    Hey everyone I'm saboor, I'm a web developer, 
-                                    I have been doing web developing for over 2 years
-                                </p>
-                            </div>
-                            <div class="banner-image">
-                                <img src="/assets/anim.png" alt="">
-                            </div>
+<nav id="nav">
+<div class="logo" ><a href="#">
+    <img src="/assets/logo.png" alt="">
+</a></div>
+<ul id="ul">
+    <li><a href="#" id="links">Home</a></li>
+    <li><a href="#" id="links">Home</a></li>
+    <li><a href="#" id="links">Home</a></li>
+    <li><a href="#" id="links">Home</a></li>
+</ul>
+<div class="open-close" id="open" onclick="OpenSide();">
+    Menu
+</div>
+</nav>
+<main>
+<section class="sectionA">
+        <div class="banner">
+            <div class="banner-wrapper">
+                    <div class="banner-title">
+                        <h1>Developed by Saboor</h1>
+                        <p>
+                            Hey everyone I'm saboor, I'm a web developer, 
+                            I have been doing web developing for over 2 years
+                        </p>
                     </div>
-                </div>
-        </section>
-    <section class="sectionB"></section>
-    </main>
-    <script>
-       let mainNav = document.getElementById('open');
-       let navBarToggle = document.getElementById('ul');
-       function OpenSide(){
-        navBarToggle.classList.toggle('active');
-       };
-  
-    </script>
-       
-    <script>
-    
-    
-        //size of screen
- $(window).on("scroll", function() {
-     if($(window).scrollTop() > 50) {
-           $("#nav").addClass("activeHeader");
-            $("#open").addClass("menuActive");
-          } else {
-            $("#nav").removeClass("activeHeader");
-            $("#open").removeClass("menuActive");
-    }
+                    <div class="banner-image">
+                        <img src="/assets/anim.png" alt="">
+                    </div>
+            </div>
+        </div>
+</section>
+<section class="sectionB">
+
+    <div id="container">
+        <h1 class="GradientBorder">Glowing Gradient Border</h1>
+      </div>
+</section>
+</main>
+<script>
+let mainNav = document.getElementById('open');
+let navBarToggle = document.getElementById('ul');
+function OpenSide(){
+navBarToggle.classList.toggle('active');
+};
+
+</script>
+
+<script>
+
+
+//size of screen
+$(window).on("scroll", function() {
+if($(window).scrollTop() > 50) {
+    $("#nav").addClass("activeHeader");
+    $("#open").addClass("menuActive");
+    } else {
+    $("#nav").removeClass("activeHeader");
+    $("#open").removeClass("menuActive");
+}
 });
 
-    </script>
+</script>
 </body>
 </html>
