@@ -184,6 +184,7 @@ border-radius: 50%;
 #home{
     position: relative;
     .banner{
+        overflow: hidden;
         max-width: 1300px;
         padding: 10px;
         display: grid;
@@ -192,18 +193,53 @@ border-radius: 50%;
     .text-banner{
         padding: 10px;
         width: 400px;
+        animation: moveleft 2s 1 normal forwards;
         h1{
             font-size: 50px;
-            color: rgb(0, 0, 0);
+        }
+        p{
+            margin-top: 10px;
+        }
+        .read-more{
+            margin-top: 10px;
+            padding: 20px;
+            width: 250px;
+            display: inline-block;
+            text-align: center;
+            border-radius: 20px;
+            background: red;
+            box-shadow:0px 5px 10px 0px #d63838, 0px 8px 5px rgba(0,0,0,0.3);
+            cursor: pointer;
+            &:hover {
+                top: 3px;
+                background-color:#ff0202;
+                box-shadow:0px 0px 10px 0px #ff0202, 0px 5px 3px rgba(0,0,0,0.2);
+                }
+            a{
+                color: white;
+                text-decoration: none;
+                font-size: 20px;
+               
+            }
         }
     }
     .image-banner{
         width: 800px;
+        animation: moveright 2s 1 normal forwards;
+     
         img{
             width: 100%;
         }
     }
 }
+@keyframes moveleft {
+    from { transform: translateX(-350px); }
+    to   { transform: translateX(0px); }
+ }
+@keyframes moveright {
+    from {transform: translateX(350px); }
+    to   { transform: translateX(0px); }
+ }
 #home::before{
     display: block;
     box-sizing: border-box;
@@ -234,6 +270,7 @@ border-radius: 50%;
             img{
                 width: 100%;
                 height: 100%;
+           
             }
         }
     }
@@ -246,6 +283,13 @@ border-radius: 50%;
             width: 700px;
            .image-banner{
                width: 100%;
+           }
+           .read-more{
+               padding: 10px;
+               width: 200px;
+               a{
+                   font-size: 18px;
+               }
            }
         }
     }
@@ -284,6 +328,12 @@ nav{
            .image-banner{
                width: 100%;
            }
+           .read-more{
+               width: 150px;
+               a{
+                   font-size: 12px;
+               }
+           }
         }
     }
 }
@@ -315,4 +365,17 @@ nav{
         }
     }
 }
-  
+  @media only screen and(max-width:  290px){
+      #home{
+          .banner{
+              .read-more{
+                  width: 100px;
+                  padding: 5px;
+                  a{
+                      text-align: center;
+                      font-size: 10px;
+                  }
+              }
+          }
+      }
+  }
