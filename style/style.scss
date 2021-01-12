@@ -100,9 +100,7 @@ border: none;
     align-items: center;
     z-index: 0;
     }
-    #home{
-        
-    }
+  
     section{
         transition: all ease-in-out .5s;
     }
@@ -111,76 +109,70 @@ border: none;
 
 /*TOGGLE COLORS*/
 #dark-btn{
-position: fixed;
-top: 60px;
-left: 10px;
-border-radius: 50%;
+// position: fixed;
+// top: 60px;
+// left: 10px;
+// border-radius: 50%;
 }
-.reds{
-    background-color: red;
-}
-.dark {
-    
-    background-color: #161625;
 
-color: #efefef;
+.dark {
+    background-color: #161625;
+    color: #efefef;
 }
-p {
-background: none !important;
-}
+
 /*SWITCH*/
 .switch {
-position: relative;
-display: inline-block;
-width: 60px;
-height: 34px;
-align-self: center;
+    position: relative;
+    display: inline-block;
+        width: 45px;
+        height: 20px;
+        align-self: center;
 }
 
 .switch input {
-opacity: 0;
-width: 0;
-height: 0;
+    opacity: 0;
+    width: 0;
+    height: 0;
 }
 
 .slider {
-position: absolute;
-cursor: pointer;
-top: 0;
-left: 0;
-right: 0;
-bottom: 0;
-background-color: #ccc;
--webkit-transition: 0.4s;
-transition: 0.4s;
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgb(255, 255, 255);
+    -webkit-transition: 0.4s;
+    transition: 0.4s;
 }
 
 .slider::before {
-position: absolute;
-content: "";
-height: 26px;
-width: 26px;
-left: 4px;
-bottom: 4px;
-background-color: white;
--webkit-transition: 0.4s;
-transition: 0.4s;
+    position: absolute;
+    content: "";
+    height: 20px;
+    width: 20px;
+    left: 0px;
+    bottom: 0px;
+    background-color: rgb(57, 240, 2);
+    -webkit-transition: 0.4s;
+    transition: 0.4s;
 }
-input::checked + .slider {
-background-color: #2196f3;
-}
-input:checked + .slider:before {
--webkit-transform: translateX(26px);
--ms-transform: translateX(26px);
-transform: translateX(26px);
-}
+    input::checked + .slider {
+    background-color: #2196f3;
+    }
+    input:checked + .slider:before {
+    -webkit-transform: translateX(26px);
+    -ms-transform: translateX(26px);
+    transform: translateX(26px);
+    }
 /* Rounded sliders */
-.slider {
-border-radius: 30px;
-}
-.slider:before {
-border-radius: 50%;
-}
+    .slider {
+     border-radius: 24px;
+    }
+    .slider:before {
+    border-radius: 50%;
+    }
 #home{
     position: relative;
     .banner{
@@ -218,7 +210,7 @@ border-radius: 50%;
                 font-size: 20px;
             }
         }
-        .read-more:hover {
+        .read-more:active {
             top: 3px;
             background-color:#ff0202;
             box-shadow:0px 0px 10px 0px #ff0202, 0px 5px 3px rgba(0,0,0,0.2);
@@ -229,8 +221,9 @@ border-radius: 50%;
         width: 870px;      
         border-radius: 10px;
         animation: moveright 2s 1 normal forwards;
-
+        
         #slider img{
+            transition: all ease-in-out .5s;
             position: absolute;
             top: 0;
             left: 0;
@@ -242,6 +235,7 @@ border-radius: 50%;
             text-align: center;
             font-size: 14px;
             border-radius: 10px;
+            
         }
         .slider-btns{
             position: absolute;
@@ -263,10 +257,7 @@ border-radius: 50%;
         }
     }
 }
-.active-item{
-    background-color: red;
-    border-radius: 10px;
-}
+
 @keyframes moveleft {
     from { transform: translateX(-350px); }
     to   { transform: translateX(0px); }
@@ -279,6 +270,121 @@ border-radius: 50%;
     display: block;
     box-sizing: border-box;
     clear: both;
+}
+.item{
+    background-color: red;
+    border-radius: 10px;
+}
+
+// sectin B or projects
+#projects{
+ 
+    .wrapper{
+        max-width: 1200px;
+        margin: 0 auto;
+        border-radius: 10px;
+        height: 400px;
+        .title{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            h1{
+                font-size: 50px;
+                text-transform: uppercase;
+                font-weight: initial;
+            }   
+        }
+        .rows{
+            width: 100%;
+            display: grid;
+            grid-template-columns: repeat(4,1fr);
+            gap: 10px;
+            padding: 20px;
+            .colums{
+                .zoom-images{
+                    position: relative;
+                    display: block;
+                    width: 100%;
+                    height: 200px;
+                    background-color: red;
+                    overflow: hidden;
+                    img{
+                        transition:  all 1s ease;
+                        width: 100%;
+                        height: 100%;
+                        cursor: pointer;
+                    }
+                }
+                .zoom-images img:hover {
+                    transform: scale(2);
+                }
+               .card-text{
+                   margin-top: 5px;
+                   display: block;
+                   text-align: center;
+                   h1{
+                       font-weight: initial;
+                       font-size: 25px;
+                      
+                   }
+                   p{
+                       line-height: 2;
+                       letter-spacing: .9px;
+                   }
+               }
+            }
+           
+        }
+    }
+}
+#contact{
+    display: block;
+    .form{
+        max-width: 700px;
+        margin: 0 auto;
+        transform: translateY(5rem);
+        flex-direction: column;
+        .wrapper{
+            padding: 10px;
+            input, textarea{
+                display: block;
+                padding: 10px;
+                margin: 10px 0;
+                outline: none;
+                font-size: 15px;
+                border-radius: 10px;
+                width: 600px;
+                width: 100%;
+              
+                border: none;
+                border-bottom: 1px solid red;
+            }
+            textarea{
+                resize: none;
+                font-size: 20px;
+                border-radius: 10px;
+                border: none;
+                border-bottom: 1px solid red;
+            }
+        }
+        .form-footer{
+            padding: 10px;
+            .submit{
+                padding: 10px;
+                width: 150px;
+                display: inline-block;
+                text-align: center;
+                border-radius: 20px;
+                background: red;
+                box-shadow:0px 5px 10px 0px #d63838, 0px 8px 5px rgba(0,0,0,0.3);
+                cursor: pointer;
+            }
+            .submit:active {
+                background-color:#ff0202;
+                box-shadow:0px 0px 10px 0px #ff0202, 0px 5px 3px rgba(0,0,0,0.2);
+            }
+        }
+    }
 }
 @media only screen and(max-width: 1280px){
     #home{
@@ -319,9 +425,13 @@ border-radius: 50%;
         }
        
     }
+   
 }
 
 @media(max-width: 970px){
+    .active-item{
+        background-color: transparent;
+    }
     #home{
         padding: 50px;
         .banner{
@@ -343,6 +453,9 @@ border-radius: 50%;
     display: block;
 }
 nav{
+    #dark-btn{
+        position: static;
+    }
     ul{
         position: fixed;
         top: 0px;
@@ -360,10 +473,41 @@ nav{
         text-align: center;
     }
 }
+
 }
+
+
+#projects{
+    height: auto;
+    width: 100%;
+    padding: 20px;
+    .wrapper{
+        .title{
+            margin-top: 5px;
+            display: block;
+            text-align: center;
+            h1{
+                font-weight: initial;
+                font-size: 30px;    
+            }
+        }
+        border-radius: 0;
+        transform: translateY(0);
+        width: 100%;
+        height: auto;
+        .rows{
+            grid-template-columns: repeat(2,1fr);
+            
+        }
+        
+    }
+    
+}
+
 .active{
     width: 250px;
 }
+
 }
 @media(max-width: 670px){
     #home{
@@ -379,6 +523,20 @@ nav{
                    font-size: 12px;
                }
            }
+        }
+    }
+    #projects{
+        height: auto;
+        width: 100%;
+        
+        .wrapper{
+            
+           
+            width: 100%;
+            height: auto;
+            .rows{
+                grid-template-columns: repeat(1,1fr);
+            }
         }
     }
 }
@@ -423,4 +581,5 @@ nav{
               }
           }
       }
+  
   }

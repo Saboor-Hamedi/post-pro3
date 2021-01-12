@@ -15,13 +15,22 @@
             <div id="brand"><h3>Logo</h3></div>
         </div>
         <nav id="nav">
-            <ul id="ul">
-                <li class="active-item"><a href="#home" class="scroll" >Home</a></li>
-                <li><a href="#about" class="scroll">Home</a></li>
-                <li><a href="#service" class="scroll">Home</a></li>
-                <li><a href="#contact" class="scroll">Home</a></li>    
-            </ul>
             
+            <ul id="ul">
+                <li  ><a href="#home" class="scroll" >View</a></li>
+                <li><a href="#projects" class="scroll">Projects</a></li>
+                <li><a href="#service" class="scroll">Services</a></li>
+                <li><a href="#contact" class="scroll">Contact</a></li>  
+                <li>
+                    <div class="main-mode"  id="dark-btn" >
+                        <label class="switch">
+                        <input type="checkbox" onclick="darkLight()" id="checkBox" >
+                        <span class="slider"></span>
+                        </label>
+                  </div>  
+                </li>
+            </ul>
+           
         </nav>
         
         <div id="menu">
@@ -34,9 +43,9 @@
     <section  class="main-mode"   id="home">
         <div class="banner">
             <div class="text-banner">
-                <h1>Web Design</h1>
-                <p> <strong>Browser </strong> we accept any types of order 
-                    which is ralted to the website</p>
+                <h1>Web Developer.</h1>
+                <p> <strong>Hey </strong> everyone this Saboor, I'm a web developer, 
+                    I'm doing backend and fronend.</p>
                 <div class="read-more">
                   <a >Browse for more</a>
                 </div>
@@ -56,15 +65,78 @@
 
         </div>
     </section>
-    <section  class="main-mode"   id="about">about</section>
+    <section  class="main-mode"   id="projects">
+       <div class="wrapper">
+        <div class="title">
+            <h1>my works</h1>
+        </div>
+        <div class="cards">
+            <div class="rows">
+            <div class="colums">
+                <div class="zoom-images">
+                    <img src="/assets/port1.png" alt="">
+                </div>
+                <div class="card-text">
+                    <h1>My First Portfolio</h1>
+                    <p>
+                      
+                        This is a avery simple portfolio of mine, I developed this to enhance my
+                        coding knowledge <a href="https://saboorportfolio2.netlify.app/" target="__blank">Visit</a>
+                    </p>
+                </div>
+            </div>
+            <div class="colums">
+                <div class="zoom-images">
+                    <img src="/assets/port2.png">
+                </div>
+                <div class="card-text">
+                    <h1>The second Portfolio</h1>
+                    <p>
+                        This is the same as my first portfolio, with a little difference.
+                        <a href="https://saboorportfolio1.netlify.app/" target="__blank">Visit</a>
+                    </p>
+                </div>
+            </div>
+            <div class="colums">
+                <div class="zoom-images">
+                    <img src="/assets/project.png" alt="">
+                </div>
+                <div class="card-text">
+                    <h1>Ttile</h1>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nisi, ratione.</p>
+                </div>
+            </div>
+            <div class="colums">
+                <div class="zoom-images">
+                    <img src="/assets/project.png" alt="">
+                </div>
+                <div class="card-text">
+                    <h1>Ttile</h1>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nisi, ratione.</p>
+                </div>
+            </div>
+            </div>
+        </div>
+       </div>
+    </section>
     <section  class="main-mode"   id="service">service</section>
-    <section  class="main-mode"   id="contact">contact</section>
-    <div class="main-mode"  id="dark-btn" >
-        <label class="switch">
-          <input type="checkbox" onclick="darkLight()" id="checkBox" >
-          <span class="slider"></span>
-        </label>
-      </div>
+    <section  class="main-mode"   id="contact">
+        <!-- fomrs -->
+        <div class="form">
+            <div class="wrapper">
+                    <form >
+                        <input type="text" id="name" class="name" placeholder="Enter your name" autocomplete="off">
+                        <input type="text" id="email" class="email" placeholder="Enter your email" autocomplete="off">
+                        <textarea name="message" id="message" cols="30" rows="10" placeholder="Enter your message"></textarea>
+                    </form>
+                    <div class="form-footer">
+                        <div type="type" class="submit" id="subimt">Submit</div>
+                    </div>
+                </div>
+
+        </div>
+    </section>
+    
    </main>
     <script src="js/main.js"></script>
 </body>
