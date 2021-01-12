@@ -315,7 +315,6 @@ input:checked + .slider:before {
     height: 100%;
   }
   #home .banner {
-    background-color: yellow;
     margin-top: 30px;
     grid-template-columns: repeat(1, 1fr);
   }
