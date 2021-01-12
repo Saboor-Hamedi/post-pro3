@@ -251,16 +251,23 @@ border-radius: 50%;
         width: 100%;
         height: 100%;
         .banner{
-            margin-top: 50px;
+            background-color: yellow;
+            margin-top: 30px;
             grid-template-columns: repeat(1, 1fr);
         }
         .text-banner{
             height: 100% ;
             width: 100%;
-            padding: 40px;
+            padding: 10px;
             text-align: center;
             h1{
                 font-size: 40px;
+            }
+            p{
+                margin-bottom: 10px;
+            }
+            .read-more{
+                margin-bottom: 10px;
             }
         }
         .image-banner{
@@ -273,6 +280,7 @@ border-radius: 50%;
            
             }
         }
+       
     }
 }
 
