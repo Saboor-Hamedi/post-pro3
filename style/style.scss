@@ -33,7 +33,7 @@ width: 90%;
 header{
 position: fixed;
 width: 100%;
-background-color: black;
+background-color: #161625;
 padding: 10px 10px;
 height: 50px;
 z-index: 1;
@@ -93,16 +93,21 @@ border: none;
 
 }
 }
-section{
-height: 100vh;
-display: flex;
-justify-content: center;
-align-items: center;
-z-index: 0;
-}
-section{
-    transition: all ease-in-out .5s;
-}
+    section{
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 0;
+    }
+    #home{
+        
+    }
+    section{
+        transition: all ease-in-out .5s;
+    }
+
+
 
 /*TOGGLE COLORS*/
 #dark-btn{
@@ -115,7 +120,9 @@ border-radius: 50%;
     background-color: red;
 }
 .dark {
-background: #000000;
+    
+    background-color: #161625;
+
 color: #efefef;
 }
 p {
@@ -174,7 +181,75 @@ border-radius: 30px;
 .slider:before {
 border-radius: 50%;
 }
-@media only screen and(max-width: 900px){
+#home{
+    position: relative;
+    .banner{
+        max-width: 1300px;
+        padding: 10px;
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+    }
+    .text-banner{
+        padding: 10px;
+        width: 400px;
+        h1{
+            font-size: 50px;
+            color: rgb(0, 0, 0);
+        }
+    }
+    .image-banner{
+        width: 800px;
+        img{
+            width: 100%;
+        }
+    }
+}
+#home::before{
+    display: block;
+    box-sizing: border-box;
+    clear: both;
+}
+@media only screen and(max-width: 1280px){
+    #home{
+        padding: 80px;
+        width: 100%;
+        height: 100%;
+        .banner{
+            margin-top: 50px;
+            grid-template-columns: repeat(1, 1fr);
+        }
+        .text-banner{
+            height: 100% ;
+            width: 100%;
+            padding: 40px;
+            text-align: center;
+            h1{
+                font-size: 40px;
+            }
+        }
+        .image-banner{
+            width: 800px;
+            height: 500px;
+            padding: 10px;
+            img{
+                width: 100%;
+                height: 100%;
+            }
+        }
+    }
+}
+
+@media(max-width: 900px){
+    #home{
+        padding: 50px;
+        .banner{
+            width: 700px;
+           .image-banner{
+               width: 100%;
+           }
+        }
+    }
+   
 #menu{
     display: block;
 }
@@ -188,7 +263,7 @@ nav{
         padding: 0;
         margin: 0;
         margin-top: 50px;
-        background-color: rgb(7, 7, 7);
+        background-color: #161625;
         overflow: hidden;
         z-index: 1;
     li{
@@ -201,3 +276,43 @@ nav{
     width: 250px;
 }
 }
+@media(max-width: 670px){
+    #home{
+        padding: 20px;
+        .banner{
+            width: 800px;
+           .image-banner{
+               width: 100%;
+           }
+        }
+    }
+}
+   
+@media(max-width: 550px){
+    #home{
+        padding: 10px;
+        display: block;
+        .banner{
+            display: block;
+            width: 100%;
+           .image-banner{
+               height: 300px;
+               width: auto;
+               img{
+                width: 100%;
+                height: 100%;
+            }
+           }
+           .text-banner{
+               display: block;
+               width: 100%;
+               height: 100%;
+            h1
+            {
+                font-size: 20px;
+            }
+           }
+        }
+    }
+}
+  

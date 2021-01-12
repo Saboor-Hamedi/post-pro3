@@ -38,7 +38,7 @@ ul {
 header {
   position: fixed;
   width: 100%;
-  background-color: black;
+  background-color: #161625;
   padding: 10px 10px;
   height: 50px;
   z-index: 1;
@@ -140,7 +140,7 @@ section {
 }
 
 .dark {
-  background: #000000;
+  background-color: #161625;
   color: #efefef;
 }
 
@@ -206,7 +206,77 @@ input:checked + .slider:before {
   border-radius: 50%;
 }
 
-@media only screen and (max-width: 900px) {
+#home {
+  position: relative;
+}
+#home .banner {
+  max-width: 1300px;
+  padding: 10px;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+}
+#home .text-banner {
+  padding: 10px;
+  width: 400px;
+}
+#home .text-banner h1 {
+  font-size: 50px;
+  color: black;
+}
+#home .image-banner {
+  width: 800px;
+}
+#home .image-banner img {
+  width: 100%;
+}
+
+#home::before {
+  display: block;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  clear: both;
+}
+
+@media only screen and (max-width: 1280px) {
+  #home {
+    padding: 80px;
+    width: 100%;
+    height: 100%;
+  }
+  #home .banner {
+    margin-top: 50px;
+    grid-template-columns: repeat(1, 1fr);
+  }
+  #home .text-banner {
+    height: 100%;
+    width: 100%;
+    padding: 40px;
+    text-align: center;
+  }
+  #home .text-banner h1 {
+    font-size: 40px;
+  }
+  #home .image-banner {
+    width: 800px;
+    height: 500px;
+    padding: 10px;
+  }
+  #home .image-banner img {
+    width: 100%;
+    height: 100%;
+  }
+}
+@media (max-width: 900px) {
+  #home {
+    padding: 50px;
+  }
+  #home .banner {
+    width: 700px;
+  }
+  #home .banner .image-banner {
+    width: 100%;
+  }
+
   #menu {
     display: block;
   }
@@ -220,7 +290,7 @@ input:checked + .slider:before {
     padding: 0;
     margin: 0;
     margin-top: 50px;
-    background-color: #070707;
+    background-color: #161625;
     overflow: hidden;
     z-index: 1;
   }
@@ -233,4 +303,41 @@ input:checked + .slider:before {
     width: 250px;
   }
 }
-/*# sourceMappingURL=style.css.map */pingURL=style.css.map */
+@media (max-width: 670px) {
+  #home {
+    padding: 20px;
+  }
+  #home .banner {
+    width: 800px;
+  }
+  #home .banner .image-banner {
+    width: 100%;
+  }
+}
+@media (max-width: 550px) {
+  #home {
+    padding: 10px;
+    display: block;
+  }
+  #home .banner {
+    display: block;
+    width: 100%;
+  }
+  #home .banner .image-banner {
+    height: 300px;
+    width: auto;
+  }
+  #home .banner .image-banner img {
+    width: 100%;
+    height: 100%;
+  }
+  #home .banner .text-banner {
+    display: block;
+    width: 100%;
+    height: 100%;
+  }
+  #home .banner .text-banner h1 {
+    font-size: 20px;
+  }
+}
+/*# sourceMappingURL=style.css.map */
