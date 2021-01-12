@@ -2,6 +2,7 @@
 padding: 0;
 margin: 0;
 box-sizing: border-box;
+
 }
 html{
 scroll-behavior:smooth;
@@ -386,6 +387,25 @@ border: none;
         }
     }
 }
+
+// go got top
+.top{
+    position: fixed;
+    right: 25px;
+    bottom: 20px;
+    background-color: red;
+    border-radius: 50px;
+    padding: 10px;
+    box-shadow:0px 5px 10px 0px #d63838, 0px 8px 5px rgba(0,0,0,0.3);
+    cursor: pointer;
+    &:active {
+    background-color:#ff0202;
+    box-shadow:0px 0px 10px 0px #ff0202, 0px 5px 3px rgba(0,0,0,0.2);
+    }
+}
+
+
+
 @media only screen and(max-width: 1280px){
     #home{
         padding: 80px;

@@ -65,3 +65,16 @@ menuBtn.addEventListener('click', function () {
 };
 
 
+// back to the top
+window.onscroll = function() {scrollFunction()};
+function scrollFunction() {
+    if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+        document.querySelector(".top").style.display = "block";
+    } else {
+        document.querySelector(".top").style.display = "none";
+    }
+}
+
+function topFunction() {
+     $('html, body').animate({scrollTop:0}, 'slow');
+}
