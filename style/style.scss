@@ -112,8 +112,8 @@ border: none;
 /*TOGGLE COLORS*/
 #dark-btn{
 position: fixed;
-bottom: 25px;
-left: 25px;
+top: 60px;
+left: 10px;
 border-radius: 50%;
 }
 .reds{
@@ -242,8 +242,6 @@ border-radius: 50%;
             text-align: center;
             font-size: 14px;
             border-radius: 10px;
-          
-           
         }
         .slider-btns{
             position: absolute;
@@ -255,7 +253,6 @@ border-radius: 50%;
             border-bottom-right-radius: 10px;
             border-bottom-left-radius: 10px;
 
-            background-color: blue;
             .pre,.next i{
                 padding: 5px;
                 color: white;
@@ -265,6 +262,10 @@ border-radius: 50%;
 
         }
     }
+}
+.active-item{
+    background-color: red;
+    border-radius: 10px;
 }
 @keyframes moveleft {
     from { transform: translateX(-350px); }

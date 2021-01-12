@@ -130,8 +130,8 @@ section {
 /*TOGGLE COLORS*/
 #dark-btn {
   position: fixed;
-  bottom: 25px;
-  left: 25px;
+  top: 60px;
+  left: 10px;
   border-radius: 50%;
 }
 
@@ -288,13 +288,17 @@ input:checked + .slider:before {
   width: 100%;
   border-bottom-right-radius: 10px;
   border-bottom-left-radius: 10px;
-  background-color: blue;
 }
 #home .image-banner .slider-btns .pre, #home .image-banner .slider-btns .next i {
   padding: 5px;
   color: white;
   font-size: 20px;
   cursor: pointer;
+}
+
+.active-item {
+  background-color: red;
+  border-radius: 10px;
 }
 
 @-webkit-keyframes moveleft {
