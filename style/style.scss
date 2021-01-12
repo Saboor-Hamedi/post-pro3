@@ -398,6 +398,9 @@ border: none;
     padding: 10px;
     box-shadow:0px 5px 10px 0px #d63838, 0px 8px 5px rgba(0,0,0,0.3);
     cursor: pointer;
+    i{
+        color: white;
+    }
     &:active {
     background-color:#ff0202;
     box-shadow:0px 0px 10px 0px #ff0202, 0px 5px 3px rgba(0,0,0,0.2);
