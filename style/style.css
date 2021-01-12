@@ -212,6 +212,7 @@ input:checked + .slider:before {
 #home .banner {
   overflow: hidden;
   max-width: 1300px;
+  height: 600px;
   padding: 10px;
   display: grid;
   grid-template-columns: repeat(2, 1fr);
@@ -219,6 +220,7 @@ input:checked + .slider:before {
 #home .text-banner {
   padding: 10px;
   width: 400px;
+  border-radius: 10px;
   -webkit-animation: moveleft 2s 1 normal forwards;
           animation: moveleft 2s 1 normal forwards;
 }
@@ -240,24 +242,59 @@ input:checked + .slider:before {
           box-shadow: 0px 5px 10px 0px #d63838, 0px 8px 5px rgba(0, 0, 0, 0.3);
   cursor: pointer;
 }
+#home .text-banner .read-more a {
+  color: white;
+  text-decoration: none;
+  font-size: 20px;
+}
 #home .text-banner .read-more:hover {
   top: 3px;
   background-color: #ff0202;
   -webkit-box-shadow: 0px 0px 10px 0px #ff0202, 0px 5px 3px rgba(0, 0, 0, 0.2);
           box-shadow: 0px 0px 10px 0px #ff0202, 0px 5px 3px rgba(0, 0, 0, 0.2);
 }
-#home .text-banner .read-more a {
-  color: white;
-  text-decoration: none;
-  font-size: 20px;
-}
 #home .image-banner {
-  width: 800px;
+  position: relative;
+  width: 870px;
+  border-radius: 10px;
   -webkit-animation: moveright 2s 1 normal forwards;
           animation: moveright 2s 1 normal forwards;
 }
-#home .image-banner img {
+#home .image-banner #slider img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: block;
   width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+  text-align: center;
+  font-size: 14px;
+  border-radius: 10px;
+}
+#home .image-banner .slider-btns {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  width: 100%;
+  border-bottom-right-radius: 10px;
+  border-bottom-left-radius: 10px;
+  background-color: blue;
+}
+#home .image-banner .slider-btns .pre, #home .image-banner .slider-btns .next i {
+  padding: 5px;
+  color: white;
+  font-size: 20px;
+  cursor: pointer;
 }
 
 @-webkit-keyframes moveleft {
@@ -316,6 +353,7 @@ input:checked + .slider:before {
   }
   #home .banner {
     margin-top: 30px;
+    height: auto;
     grid-template-columns: repeat(1, 1fr);
   }
   #home .text-banner {
@@ -337,13 +375,14 @@ input:checked + .slider:before {
     width: 800px;
     height: 500px;
     padding: 10px;
+    margin-top: 10px;
   }
   #home .image-banner img {
     width: 100%;
     height: 100%;
   }
 }
-@media (max-width: 900px) {
+@media (max-width: 970px) {
   #home {
     padding: 50px;
   }

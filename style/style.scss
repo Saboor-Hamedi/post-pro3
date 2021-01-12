@@ -186,6 +186,7 @@ border-radius: 50%;
     .banner{
         overflow: hidden;
         max-width: 1300px;
+        height: 600px;
         padding: 10px;
         display: grid;
         grid-template-columns: repeat(2, 1fr);
@@ -193,6 +194,7 @@ border-radius: 50%;
     .text-banner{
         padding: 10px;
         width: 400px;
+        border-radius: 10px;
         animation: moveleft 2s 1 normal forwards;
         h1{
             font-size: 50px;
@@ -210,25 +212,57 @@ border-radius: 50%;
             background: red;
             box-shadow:0px 5px 10px 0px #d63838, 0px 8px 5px rgba(0,0,0,0.3);
             cursor: pointer;
-            &:hover {
-                top: 3px;
-                background-color:#ff0202;
-                box-shadow:0px 0px 10px 0px #ff0202, 0px 5px 3px rgba(0,0,0,0.2);
-                }
             a{
                 color: white;
                 text-decoration: none;
                 font-size: 20px;
-               
             }
         }
+        .read-more:hover {
+            top: 3px;
+            background-color:#ff0202;
+            box-shadow:0px 0px 10px 0px #ff0202, 0px 5px 3px rgba(0,0,0,0.2);
+            }
     }
     .image-banner{
-        width: 800px;
+        position: relative;
+        width: 870px;      
+        border-radius: 10px;
         animation: moveright 2s 1 normal forwards;
-     
-        img{
+
+        #slider img{
+            position: absolute;
+            top: 0;
+            left: 0;
+            display: block;
             width: 100%;
+            height: 100%;
+            border-radius: 50%;
+            user-select: none;
+            text-align: center;
+            font-size: 14px;
+            border-radius: 10px;
+          
+           
+        }
+        .slider-btns{
+            position: absolute;
+            left: 0;
+            bottom: 0;
+            display: flex;
+            justify-content: space-around;
+            width: 100%;
+            border-bottom-right-radius: 10px;
+            border-bottom-left-radius: 10px;
+
+            background-color: blue;
+            .pre,.next i{
+                padding: 5px;
+                color: white;
+                font-size: 20px;
+                cursor: pointer;
+            }
+
         }
     }
 }
@@ -252,12 +286,14 @@ border-radius: 50%;
         height: 100%;
         .banner{
             margin-top: 30px;
+            height: auto;
             grid-template-columns: repeat(1, 1fr);
         }
         .text-banner{
             height: 100% ;
             width: 100%;
             padding: 10px;
+            
             text-align: center;
             h1{
                 font-size: 40px;
@@ -273,6 +309,7 @@ border-radius: 50%;
             width: 800px;
             height: 500px;
             padding: 10px;
+            margin-top: 10px;
             img{
                 width: 100%;
                 height: 100%;
@@ -283,7 +320,7 @@ border-radius: 50%;
     }
 }
 
-@media(max-width: 900px){
+@media(max-width: 970px){
     #home{
         padding: 50px;
         .banner{
